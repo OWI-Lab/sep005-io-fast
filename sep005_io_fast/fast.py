@@ -17,7 +17,7 @@ def read_fast_file(file_path: str) -> list[dict]:
    df.index = pd.to_datetime(df["Time"], unit='s')  # Convert index to datetime
    df.drop(columns="Time", inplace=True)
 
-   # Shift the index based on fictive_measurement_start_fast
+   # Update the index based on fictive_measurement_start_fast
    fictive_measurement_start_fast = datetime(2022, 1, 1)
    df.index = df.index + (fictive_measurement_start_fast - df.index[0])
 
