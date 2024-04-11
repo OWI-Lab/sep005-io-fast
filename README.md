@@ -13,6 +13,7 @@ from sep005_io_fast import read_fast_file
 file_path = # Path to the FAST.out file of interest
 signals = read_fast_file(file_path)
 
+```
 Acknowledgements
 ----------------
 This package was developed in the framework of the
