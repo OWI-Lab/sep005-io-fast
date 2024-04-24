@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sep005_io_fast"
-version = "0.1.0"
 authors = [
     {name = "Abdulelah Al-Ghuwaidi", email = "Abdulelah.Al-Ghuwaidi@vub.be"}
 ]
@@ -13,7 +12,6 @@ maintainers = [
     {name = "Arsen Melnikov", email = "melnikov.arsene@gmail.com"}
 ]
 description = "Transform Openfast FAST.out data into the data compliant with SDyPy SEP005"
-readme = "README.md"
 requires-python = ">=3.9"
 keywords = ["io", "fast", "SEP005"]
 license = {text = "MIT license"}
@@ -26,7 +24,11 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12"
 ]
-dynamic = ["dependencies"]
+dynamic = [
+    "dependencies",
+    "version",
+    "readme"
+]
 
 [project.optional-dependencies]
 dev = [
@@ -48,3 +50,5 @@ packages = ["sep005_io_fast"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+version = {attr = "sep005_io_fast.__version__"}
+readme = {file = "README.md"}
