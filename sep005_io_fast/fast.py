@@ -10,6 +10,13 @@ import pandas as pd
 
 
 def read_fast_file(file_path: str) -> list[dict]:
+    """Convert a FAST file to a list of signals in SEP005 format.
+
+    Args:
+        file_path: Path to the FAST file.
+    Returns:
+        List of signals in SEP005 format.
+    """
     df = pd.read_table(file_path, skiprows=6, dtype=str)
     units_df = df.iloc[0:1].copy()
     units_df.drop(columns="Time", inplace=True)
