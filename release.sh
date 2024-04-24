@@ -1,7 +1,7 @@
 #!/bin/bash
 version_old=$(git describe --tags --abbrev=0)
-if [ "$version_old" = "$1" ]; then
-    echo "Warning: you did not change the version! Please check the __version__ in your __init__.py"
+if [ "$version_old" == "$1" ]; then
+    echo "Error: you did not change the version! Please check the __version__ in your __init__.py"
     exit 1
 fi
 echo "Creating new release: $version_old -> $1"
