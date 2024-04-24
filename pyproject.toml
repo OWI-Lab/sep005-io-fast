@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sep005_io_fast"
+version = "0.1.0"
+authors = [
+    {name = "Abdulelah Al-Ghuwaidi", email = "Abdulelah.Al-Ghuwaidi@vub.be"}
+]
+maintainers = [
+    {name = "Abdulelah Al-Ghuwaidi", email = "Abdulelah.Al-Ghuwaidi@vub.be"},
+    {name = "Arsen Melnikov", email = "melnikov.arsene@gmail.com"}
+]
+description = "Transform Openfast FAST.out data into the data compliant with SDyPy SEP005"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["io", "fast", "SEP005"]
+license = {text = "MIT license"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+    "nox",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-xdist"
+]
+
+[project.urls]
+Repository = "https://github.com/OWI-Lab/sep005_io_fast"
+
+[tool.setuptools]
+packages = ["sep005_io_fast"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
