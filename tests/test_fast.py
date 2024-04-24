@@ -6,13 +6,14 @@ Created on Wed Apr  3 14:24:32 2024
 """
 
 from pathlib import Path
-import pytest
 
-from sep005_io_fast.fast import read_fast_file
+import pytest
 from sdypy_sep005.sep005 import assert_sep005
 
+from sep005_io_fast import read_fast_file
 
-@pytest.fixture(scope='module')
+
+@pytest.fixture(scope="module")
 def file_path():
     filename = "5MW_OC4Semi_H2.5_T10_WS13.out"
     pathname = Path(__file__).resolve().parent
@@ -22,4 +23,3 @@ def file_path():
 def test_read_fast(file_path):
     signals = read_fast_file(file_path)
     assert assert_sep005(signals) is None
-
