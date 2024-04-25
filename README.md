@@ -8,9 +8,11 @@ Installation
 ------------
 Regular install:
 ```
-pip install sep005_io_fast
+pip install sep005-io-fast
 ```
 For developers:
+
+After cloning into your folder
 ```
 pip install -e .[dev]
 ```
