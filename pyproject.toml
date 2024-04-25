@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sep005_io_fast"
+name = "sep005-io-fast"
 authors = [
     {name = "Abdulelah Al-Ghuwaidi", email = "Abdulelah.Al-Ghuwaidi@vub.be"}
 ]
@@ -43,10 +43,7 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/OWI-Lab/sep005_io_fast"
-
-[tool.setuptools]
-packages = ["sep005_io_fast"]
+Repository = "https://github.com/OWI-Lab/sep005-io-fast"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
