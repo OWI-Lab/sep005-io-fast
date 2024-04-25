@@ -24,7 +24,7 @@ jobs:
         run: |
           python -m build
       - name: Publish distribution
-        uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@release/v1.8
         with:
             user: __token__
             password: ${{ secrets.PYPI_TOKEN }}
